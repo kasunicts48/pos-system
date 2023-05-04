@@ -1,17 +1,17 @@
 .mainDiv {
   margin: 0px;
   display: flex;
-  flex-direction : column;
+  flex-direction: column;
   height: 100vh;
 }
 
-.logoImage{
+.logoImage {
   display: flex;
   align-self: end;
-  margin-right: 20px
+  margin-right: 20px;
 }
 
-.loginDiv{
+.loginDiv {
   display: flex;
   margin: 100px 20px;
   gap: 20px;
@@ -21,31 +21,39 @@
   /* justify-content: center; */
 }
 
-.inputFiled{
+.inputFiled {
   display: flex;
   flex-direction: column;
 }
 
-.inputFiled input{
-  background: #F4F4F4;
+.inputFiled input {
+  background: #f4f4f4;
   outline: none;
   border: none;
   padding: 10px 10px;
   border-radius: 5px;
 }
 
-.loginButton{
+.error {
+  color: rgb(255, 49, 49);
+}
+
+.errorHide {
+  display: none;
+}
+
+.loginButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #EE8C21;
+  background: #ee8c21;
   padding: 10px;
   border-radius: 5px;
-  color: #F4F4F4;
+  color: #f4f4f4;
   cursor: pointer;
 }
 
-.loginButton:hover{
+.loginButton:hover {
   background: #f78e1d;
   color: #fff;
 }
