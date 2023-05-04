@@ -1,8 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import DashboardLayout from "@/components/dashboardLayout";
+import { useRouter } from "next/router";
 
 const DashboardPage = () => {
+    const router = useRouter();
   return (
     <>
       <Head>
@@ -12,7 +14,9 @@ const DashboardPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <DashboardLayout/>
+        <DashboardLayout>
+          {router.pathname}
+        </DashboardLayout>
       </div>
     </>
   );

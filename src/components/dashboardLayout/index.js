@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import DashboardIconList from "./dashboardIconList";
 
-const DashboardLayout = () => {
+const DashboardLayout = ({ children }) => {
   return (
     <>
       <div className={styles.mainDiv}>
@@ -21,7 +21,7 @@ const DashboardLayout = () => {
             <DashboardIconList />
           </div>
         </div>
-        <div className={styles.rightDiv}>RouterName</div>
+        <div className={styles.rightDiv}>{ children }</div>
       </div>
     </>
   );
