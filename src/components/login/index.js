@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import styles from "./index.module.css";
 import Image from "next/image";
 
@@ -6,23 +6,27 @@ import Image from "next/image";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
+const loginCredential = {};
+
 const Login = () => {
-  
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
-  }
+  };
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
-  }
+  };
 
   const handleLogin = () => {
     // Handle login logic here
-  }
-
+    console.log("email", email);
+    console.log("password", password);
+    setEmail("");
+    setPassword("");
+  };
 
   return (
     <>
@@ -44,14 +48,24 @@ const Login = () => {
                 <h2>Login</h2>
                 <div className={styles.inputFiled}>
                   <label>E - mail</label>
-                  <input type="text" placeholder="Enter your Email" />
+                  <input
+                    value={email}
+                    type="text"
+                    placeholder="Enter your Email"
+                    onChange={handleEmailChange}
+                  />
                 </div>
                 <div className={styles.inputFiled}>
                   <label>Password</label>
-                  <input type="password" placeholder="Enter your Password" />
+                  <input
+                    value={password}
+                    type="password"
+                    placeholder="Enter your Password"
+                    onChange={handlePasswordChange}
+                  />
                 </div>
 
-                <div className={styles.loginButton} >
+                <div className={styles.loginButton} onClick={handleLogin}>
                   Login
                 </div>
               </div>
