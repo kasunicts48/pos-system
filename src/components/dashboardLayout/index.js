@@ -10,7 +10,13 @@ const DashboardLayout = ({ children }) => {
         <div className={styles.leftDiv}>
           <div className={styles.profileDiv}>
             <div className={styles.profileImageDiv}>
-            <Image src={"/profileImage.jpg"} alt="profile" width={50} height={50} style={{objectFit: "cover"}}  />
+              <Image
+                src={"/profileImage.jpg"}
+                alt="profile"
+                width={50}
+                height={50}
+                style={{ objectFit: "cover", borderRadius: "50%" }}
+              />
             </div>
             <div className={styles.profileDetailsDiv}>
               <p>Profile Name</p>
@@ -21,7 +27,7 @@ const DashboardLayout = ({ children }) => {
             <DashboardIconList />
           </div>
         </div>
-        <div className={styles.rightDiv}>{ children }</div>
+        <div className={styles.rightDiv}>{children}</div>
       </div>
     </>
   );

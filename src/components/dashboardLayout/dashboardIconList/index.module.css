@@ -10,9 +10,10 @@
   align-items: center;
   /* justify-content: center; */
   padding: 10px 20px;
-  background: rgb(196, 196, 196);
+  background: #ee8c21;
   border-radius: 5px;
   cursor: pointer;
+  color: #fff;
   /* width: max-content; */
 }
 
