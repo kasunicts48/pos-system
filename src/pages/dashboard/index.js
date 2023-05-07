@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import DashboardLayout from "@/components/dashboardLayout";
 import { useRouter } from "next/router";
+import Dashboard from "@/components/dashboard";
 
 const DashboardPage = () => {
     const router = useRouter();
@@ -15,7 +16,7 @@ const DashboardPage = () => {
       </Head>
       <div>
         <DashboardLayout>
-          {router.pathname}
+          <Dashboard/>
         </DashboardLayout>
       </div>
     </>
