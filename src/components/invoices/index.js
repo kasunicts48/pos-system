@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import InvoiceTable from "./invoiceViewTable";
+import { Modal, Text } from "@nextui-org/react";
+import AddItemToInvoice from "./addItemToInvoce";
 
 const Invoices = () => {
   const [product, setProduct] = useState({
@@ -10,6 +12,8 @@ const Invoices = () => {
     invoiceDate: "",
   });
 
+  const [visible, setVisible] = useState(false);
+
   const handleChange = (event) => {
     setProduct({ ...product, [event.target.name]: event.target.value });
   };
@@ -17,6 +21,12 @@ const Invoices = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Product:", product);
+  };
+
+  const handler = () => setVisible(true);
+
+  const closeHandler = () => {
+    setVisible(false);
   };
   return (
     <>
@@ -65,7 +75,7 @@ const Invoices = () => {
           </div>
 
           <div className={styles.buttonGroup}>
-            <button className={styles.submitButton} onClick={handleSubmit}>
+            <button className={styles.submitButton} onClick={handler}>
               Search Item
             </button>
           </div>
@@ -85,15 +95,33 @@ const Invoices = () => {
             </div>
           </div>
           <div className={styles.buttonGroup2}>
-              <button className={styles.submitButton} onClick={handleSubmit}>
-                Save
-              </button>
-              <button className={styles.submitButton} onClick={handleSubmit}>
-                Preview
-              </button>
-            </div>
+            <button className={styles.submitButton} onClick={handleSubmit}>
+              Save
+            </button>
+            <button className={styles.submitButton} onClick={handleSubmit}>
+              Preview
+            </button>
+          </div>
         </div>
       </div>
+
+      <Modal
+        closeButton
+        aria-labelledby="modal-title"
+        open={visible}
+        width={1300}
+        scroll={true}
+        onClose={closeHandler}
+      >
+        <Modal.Header>
+          <Text id="modal-title" size={20}>
+            Select Item
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <AddItemToInvoice />
+        </Modal.Body>
+      </Modal>
     </>
   );
 };
