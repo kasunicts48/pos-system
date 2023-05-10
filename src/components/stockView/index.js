@@ -22,7 +22,7 @@ const StockView = () => {
   return (
     <>
       <div className={styles.mainDiv}>
-        <h2>GRN View</h2>
+        <h2>Stock View</h2>
         <div className={styles.viewForm}>
           <div className={styles.bottomGrnFormInput}>
             <text>invoiceNo:</text>

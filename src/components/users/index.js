@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
-import AddCustomer from "./addCustomer";
-
-const Customer = () => {
+import AddUser from './addUsers'
+const Users = () => {
   return (
     <>
       <div>
         <div className={styles.customerTopDiv}>
-          <h2>Add Customer</h2>
-       
+          <h2>Add Users</h2>
         </div>
-        <AddCustomer />
+        <AddUser/>
       </div>
     </>
   );
 };
 
-export default Customer;
+export default Users;
