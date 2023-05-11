@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import { Avatar } from "@nextui-org/react";
 import Dropzone from "react-dropzone";
 
-const AddUsers = () => {
+const UserSettings = () => {
   const [avatarImage, setAvatarImage] = useState(
     "https://sm.ign.com/ign_ap/cover/a/avatar-gen/avatar-generations_hugw.jpg",
   );
@@ -121,7 +121,7 @@ const AddUsers = () => {
             <div className={styles.bottomGrnDownForm}>
               <div className={styles.buttonGroup}>
                 <button className={styles.submitButton} onClick={handleSubmit}>
-                  Add User
+                  Save
                 </button>
                 <button className={styles.editButton}>View Details</button>
               </div>
@@ -133,4 +133,4 @@ const AddUsers = () => {
   );
 };
 
-export default AddUsers;
+export default UserSettings;
