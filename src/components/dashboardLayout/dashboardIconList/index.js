@@ -31,6 +31,11 @@ const dashboardList = [
     icon: <SlSocialDropbox />,
   },
   {
+    name: "Invoice View",
+    routerName: "invoice-view",
+    icon: <IoMdAnalytics />,
+  },
+  {
     name: "Stock View",
     routerName: "stock-view",
     icon: <IoMdAnalytics />,

@@ -32,7 +32,7 @@ const AddItemToInvoice = () => {
             />
           </div>
           <div className={styles.bottomGrnFormInput}>
-            <text>Customer Name:</text>
+            <text>Code:</text>
             <input
               type="text"
               name="code"

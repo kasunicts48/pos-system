@@ -121,9 +121,9 @@ const UserSettings = () => {
             <div className={styles.bottomGrnDownForm}>
               <div className={styles.buttonGroup}>
                 <button className={styles.submitButton} onClick={handleSubmit}>
-                  Save
+                  Edit Details
                 </button>
-                <button className={styles.editButton}>View Details</button>
+                {/* <button className={styles.editButton}>View Details</button> */}
               </div>
             </div>
           </div>
