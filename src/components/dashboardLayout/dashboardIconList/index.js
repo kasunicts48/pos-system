@@ -12,43 +12,46 @@ import { useRouter } from "next/router";
 const dashboardList = [
   {
     name: "dashboard",
-    icon: "add",
     routerName: "dashboard",
     icon: <RxDashboard />,
   },
   {
     name: "GRN",
-    icon: "add",
     routerName: "grn",
     icon: <AiTwotoneShop />,
   },
   {
     name: "invoices",
-    icon: "add",
     routerName: "invoices",
     icon: <FaFileInvoice />,
   },
   {
     name: "GRN View",
-    icon: "add",
     routerName: "grn-view",
     icon: <SlSocialDropbox />,
   },
   {
+    name: "Invoice View",
+    routerName: "invoice-view",
+    icon: <IoMdAnalytics />,
+  },
+  {
+    name: "Stock View",
+    routerName: "stock-view",
+    icon: <IoMdAnalytics />,
+  },
+  {
     name: "customer",
-    icon: "add",
     routerName: "customer",
     icon: <MdPeopleAlt />,
   },
   {
     name: "users",
-    icon: "add",
     routerName: "users",
     icon: <HiUserGroup />,
   },
   {
     name: "settings",
-    icon: "add",
     routerName: "settings",
     icon: <AiTwotoneSetting />,
   },

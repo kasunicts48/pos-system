@@ -2,7 +2,11 @@ import React from "react";
 import styles from "./index.module.css";
 import { Table } from "@nextui-org/react";
 
-const GRNViewTable = () => {
+const InvoiceTable = () => {
+  const handleCellClick = (event) => {
+    // Perform actions when the cell is clicked
+    console.log("Cell clicked!");
+  };
   return (
     <div>
       <Table
@@ -10,18 +14,15 @@ const GRNViewTable = () => {
         shadow={false}
         aria-label="Example table with dynamic content & infinity pagination"
         css={{ height: "calc($space$10 * 10)" }}
-        selectionMode="single"
         color="warning"
       >
         <Table.Header>
-          <Table.Column>No</Table.Column>
-          <Table.Column>Code</Table.Column>
+          <Table.Column>ItemNo</Table.Column>
           <Table.Column>Description</Table.Column>
-          <Table.Column>Qty</Table.Column>
-          <Table.Column>Sales Price</Table.Column>
-          <Table.Column>Quality</Table.Column>
           <Table.Column>Part No</Table.Column>
-          <Table.Column>Supply No</Table.Column>
+          <Table.Column>Qty</Table.Column>
+          <Table.Column>Price</Table.Column>
+          <Table.Column></Table.Column>
         </Table.Header>
         <Table.Body>
           <Table.Row key="1">
@@ -30,9 +31,11 @@ const GRNViewTable = () => {
             <Table.Cell>This is Description</Table.Cell>
             <Table.Cell>05</Table.Cell>
             <Table.Cell>3456.99</Table.Cell>
-            <Table.Cell>2</Table.Cell>
-            <Table.Cell>P2321</Table.Cell>
-            <Table.Cell>S2323</Table.Cell>
+            <Table.Cell>
+              <div onClick={handleCellClick} className={styles.tableCell}>
+                Delete
+              </div>
+            </Table.Cell>
           </Table.Row>
           <Table.Row key="2">
             <Table.Cell>01</Table.Cell>
@@ -40,9 +43,11 @@ const GRNViewTable = () => {
             <Table.Cell>This is Description</Table.Cell>
             <Table.Cell>05</Table.Cell>
             <Table.Cell>3456.99</Table.Cell>
-            <Table.Cell>2</Table.Cell>
-            <Table.Cell>P2321</Table.Cell>
-            <Table.Cell>S2323</Table.Cell>
+            <Table.Cell>
+              <div onClick={handleCellClick} className={styles.tableCell}>
+                Delete
+              </div>
+            </Table.Cell>
           </Table.Row>
           <Table.Row key="3">
             <Table.Cell>01</Table.Cell>
@@ -50,9 +55,11 @@ const GRNViewTable = () => {
             <Table.Cell>This is Description</Table.Cell>
             <Table.Cell>05</Table.Cell>
             <Table.Cell>3456.99</Table.Cell>
-            <Table.Cell>2</Table.Cell>
-            <Table.Cell>P2321</Table.Cell>
-            <Table.Cell>S2323</Table.Cell>
+            <Table.Cell>
+              <div onClick={handleCellClick} className={styles.tableCell}>
+                Delete
+              </div>
+            </Table.Cell>
           </Table.Row>
           <Table.Row key="4">
             <Table.Cell>01</Table.Cell>
@@ -60,9 +67,11 @@ const GRNViewTable = () => {
             <Table.Cell>This is Description</Table.Cell>
             <Table.Cell>05</Table.Cell>
             <Table.Cell>3456.99</Table.Cell>
-            <Table.Cell>2</Table.Cell>
-            <Table.Cell>P2321</Table.Cell>
-            <Table.Cell>S2323</Table.Cell>
+            <Table.Cell>
+              <div onClick={handleCellClick} className={styles.tableCell}>
+                Delete
+              </div>
+            </Table.Cell>
           </Table.Row>
         </Table.Body>
       </Table>
@@ -70,4 +79,4 @@ const GRNViewTable = () => {
   );
 };
 
-export default GRNViewTable;
+export default InvoiceTable;

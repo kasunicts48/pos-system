@@ -2,7 +2,11 @@ import React from "react";
 import styles from "./index.module.css";
 import { Table } from "@nextui-org/react";
 
-const GRNViewTable = () => {
+const AddItemTable = () => {
+  const handleCellClick = (event) => {
+    // Perform actions when the cell is clicked
+    console.log("Cell clicked!");
+  };
   return (
     <div>
       <Table
@@ -10,14 +14,13 @@ const GRNViewTable = () => {
         shadow={false}
         aria-label="Example table with dynamic content & infinity pagination"
         css={{ height: "calc($space$10 * 10)" }}
-        selectionMode="single"
         color="warning"
       >
         <Table.Header>
           <Table.Column>No</Table.Column>
-          <Table.Column>Code</Table.Column>
+          <Table.Column>code</Table.Column>
           <Table.Column>Description</Table.Column>
-          <Table.Column>Qty</Table.Column>
+          <Table.Column>Quantity</Table.Column>
           <Table.Column>Sales Price</Table.Column>
           <Table.Column>Quality</Table.Column>
           <Table.Column>Part No</Table.Column>
@@ -70,4 +73,4 @@ const GRNViewTable = () => {
   );
 };
 
-export default GRNViewTable;
+export default AddItemTable;
