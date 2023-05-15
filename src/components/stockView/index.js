@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
-import StockViewSingleCard from "./stockViewSingleCard";
+import StockViewTable from "./stockViewTable";
 
 const StockView = () => {
   const [product, setProduct] = useState({
-    invoiceNo: "",
-    option: "",
-    from: "",
-    to: "",
+    itemType: "",
+    model: "",
+    category: "",
+    code: "",
+    description: "",
+    partNo: "",
   });
 
   const handleChange = (event) => {
@@ -24,81 +26,87 @@ const StockView = () => {
       <div className={styles.mainDiv}>
         <h2>Invoice View</h2>
         <div className={styles.viewForm}>
-          <div className={styles.bottomGrnFormInput}>
-            <text>invoiceNo:</text>
-            <input
-              type="text"
-              name="invoiceNo"
-              value={product.invoiceNo}
-              onChange={handleChange}
-            />
+          <div className={styles.topInvoiceView}>
+            <div className={styles.bottomGrnFormInput}>
+              <text>Item Type</text>
+              <select
+                name="itemType"
+                value={product.itemType}
+                onChange={handleChange}
+              >
+                <option value="">Select Options</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+            <div className={styles.bottomGrnFormInput}>
+              <text>Model</text>
+              <select
+                name="model"
+                value={product.model}
+                onChange={handleChange}
+              >
+                <option value="">Select Options</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+            <div className={styles.bottomGrnFormInput}>
+              <text>Category</text>
+              <select
+                name="category"
+                value={product.category}
+                onChange={handleChange}
+              >
+                <option value="">Select Options</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
           </div>
-          <div className={styles.bottomGrnFormInput}>
-            <text>Option</text>
-            <select
-              name="option"
-              value={product.option}
-              onChange={handleChange}
-            >
-              <option value="">Select Options</option>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-            </select>
-          </div>
-          <div className={styles.bottomGrnFormInput}>
-            <text>From:</text>
-            <input
-              type="text"
-              name="from"
-              value={product.from}
-              onChange={handleChange}
-            />
-          </div>
-          <div className={styles.bottomGrnFormInput}>
-            <text>To:</text>
-            <input
-              type="text"
-              name="to"
-              value={product.to}
-              onChange={handleChange}
-            />
-          </div>
-
-          <div className={styles.buttonGroup}>
-            <button className={styles.submitButton} onClick={handleSubmit}>
-              Find
-            </button>
+          <div className={styles.bottomInvoiceView}>
+            <div className={styles.bottomGrnFormInput}>
+              <text>Code:</text>
+              <input
+                type="text"
+                name="code"
+                value={product.code}
+                onChange={handleChange}
+              />
+            </div>
+            <div className={styles.bottomGrnFormInput}>
+              <text>Description:</text>
+              <input
+                type="text"
+                name="description"
+                value={product.description}
+                onChange={handleChange}
+              />
+            </div>
+            <div className={styles.bottomGrnFormInput}>
+              <text>Part No:</text>
+              <input
+                type="text"
+                name="partNo"
+                value={product.partNo}
+                onChange={handleChange}
+              />
+            </div>
+            <div className={styles.buttonGroup}>
+              <button className={styles.submitButton} onClick={handleSubmit}>
+                Find
+              </button>
+            </div>
           </div>
         </div>
 
         {/* ---------------------------------------------- */}
 
         <div className={styles.viewTable}>
-          <StockViewSingleCard
-            invoiceNo={"GRN0001"}
-            option={"Local Purchasing"}
-            customerName={"JUKI"}
-            date={"2023/01/03"}
-          />
-          <StockViewSingleCard
-            invoiceNo={"GRN0001"}
-            option={"Local Purchasing"}
-            customerName={"JUKI"}
-            date={"2023/01/03"}
-          />
-          <StockViewSingleCard
-            invoiceNo={"GRN0001"}
-            option={"Local Purchasing"}
-            customerName={"JUKI"}
-            date={"2023/01/03"}
-          />
-          <StockViewSingleCard
-            invoiceNo={"GRN0001"}
-            option={"Local Purchasing"}
-            customerName={"JUKI"}
-            date={"2023/01/03"}
-          />
+          <StockViewTable />
         </div>
       </div>
     </>
