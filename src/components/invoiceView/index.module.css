@@ -1,18 +1,8 @@
 .viewForm {
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
   gap: 30px;
   justify-content: space-between;
-}
-
-.topInvoiceView{
-  display: flex;
-  gap: 30px;
-}
-.bottomInvoiceView{
-  display: flex;
-  gap: 30px;
 }
 
 .bottomGrnFormInput {

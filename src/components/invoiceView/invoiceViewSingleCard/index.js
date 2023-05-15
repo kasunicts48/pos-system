@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
 
-const StockViewSingleCard = ({ invoiceNo, option, customerName, date }) => {
+const InvoiceViewSingleCard = ({ invoiceNo, option, customerName, date }) => {
   return (
     <>
       <div className={styles.mainDiv}>
@@ -26,4 +26,4 @@ const StockViewSingleCard = ({ invoiceNo, option, customerName, date }) => {
   );
 };
 
-export default StockViewSingleCard;
+export default InvoiceViewSingleCard;

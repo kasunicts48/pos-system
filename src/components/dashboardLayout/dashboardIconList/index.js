@@ -7,6 +7,7 @@ import { SlSocialDropbox } from "react-icons/sl";
 import { MdPeopleAlt } from "react-icons/md";
 import { IoMdAnalytics } from "react-icons/io";
 import { HiUserGroup } from "react-icons/hi";
+import { VscPreview } from "react-icons/vsc";
 import { useRouter } from "next/router";
 
 const dashboardList = [
@@ -33,7 +34,7 @@ const dashboardList = [
   {
     name: "Invoice View",
     routerName: "invoice-view",
-    icon: <IoMdAnalytics />,
+    icon: <VscPreview />,
   },
   {
     name: "Stock View",
